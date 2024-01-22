@@ -1,0 +1,96 @@
+requirement document :-
+1) there will be scanner where-in students will directly land to sign-up page where students will enter name email phone number and a password and for already registered users there tehy will have direct login option 
+
+2) after login/sign-up they will reach home page where thwy can browse menu items 
+  - firstly there will be mostly ordered menu and above that their will be filter for veg non-ver etc
+  - there will name of food below it their will be 1-2 line discription price and on right side their will be photo and add button 
+
+3) once the item is added below they can see that this number of items are added and they can click on that to proceed
+
+4) once clicked on proceed they will see 
+   - how much time itll to get ready 
+   - what all items are added and calculations of grand total 
+
+5) after that there will be call to action to place order which will give all online options available for payment student will select one options and pay the   
+   amount 
+
+6) after taht student will redirected to the web app and a unique token will be generated which will be shown in canteen to collect thier they will also receive notification when they can collect their order 
+
+
+Based on your requirements, here's an optimized version of the document along with some additional points and a beginner-friendly tech stack:
+
+**Requirements Document: Online Canteen Ordering System**
+
+**Introduction:**
+The online canteen ordering system is designed to provide a user-friendly experience for students to order food from the canteen. The system aims to streamline the ordering process, improve convenience, and offer a seamless payment experience.
+
+**User Registration and Login:**
+
+1. **User Registration:** 
+   - Users can sign up with the system by providing their name, email, phone number, and password.
+   - Existing users can log in directly.
+   
+**User Dashboard:**
+
+2. **Home Page:**
+   - Upon login, users are directed to the home page where they can browse menu items.
+   - The menu is categorized into "Mostly Ordered" and provides filters for vegetarian and non-vegetarian options.
+   - Each menu item is displayed with its name, a brief description, price, a photo, and an "Add" button for selection.
+
+3. **Cart Management:**
+   - Users can view the number of items in their cart.
+   - They can click on the cart to proceed with their order.
+
+**Order Processing:**
+
+4. **Order Details:**
+   - Users will see an estimated time for order preparation.
+   - A summary of the items added to the cart, including quantities and prices, will be displayed.
+   - A calculation for the grand total will be shown.
+
+5. **Payment Options:**
+   - Users will have access to various online payment options.
+   - After selecting a payment method, they can proceed with payment.
+
+6. **Order Confirmation:**
+   - After successful payment, users will receive a unique order token.
+   - A notification will inform users when they can collect their order at the canteen.
+
+**Additional Features:**
+
+7. **Ratings and Reviews:**
+   - Users can provide feedback and ratings for their orders, which can be used for continuous improvement of canteen services.
+
+**Tech Stack: Beginner-Friendly**
+
+To keep the technology stack beginner-friendly, you can use the following technologies:
+
+**Front-end:**
+- **HTML/CSS**: For basic web structure and styling.
+- **JavaScript**: For interactivity and front-end logic.
+- **React.js**: A beginner-friendly JavaScript library for building the user interface.
+- **Bootstrap**: For responsive design and UI components.
+
+**Back-end:**
+- **Node.js**: A beginner-friendly runtime environment for JavaScript.
+- **Express.js**: A minimal and beginner-friendly web framework for Node.js.
+- **Firebase**: For authentication, real-time database, and hosting.
+
+**Database:**
+- **Firebase Realtime Database or Firestore**: A NoSQL database for storing user data and menu items.
+
+**Authentication:**
+- **Firebase Authentication**: For handling user registration and login.
+
+**Additional Tools:**
+- **Git**: For version control.
+- **Firebase Cloud Functions**: For serverless back-end logic.
+- **Firebase Hosting**: For web app deployment.
+
+**Security:**
+- Firebase's built-in security rules for database and storage.
+
+**Payment Gateway:**
+- You can integrate a sandbox version of a payment gateway like Stripe for testing without actual transactions.
+
+This technology stack provides a solid foundation for building a beginner-friendly online canteen ordering system. It abstracts many server-side complexities and focuses on user-friendly features. As users' needs and your experience grow, you can expand your tech stack and add more advanced features.

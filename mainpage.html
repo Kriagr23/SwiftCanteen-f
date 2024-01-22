@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/mainpage.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <!-- Include Stripe.js -->
+<script src="https://js.stripe.com/v3/"></script>
+
+</head>
+
+<body style="background-color: #dfebdf;">
+  
+  
+<!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Menu Items</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body ">
+        <!-- <p>Welcome! Our menu offers a diverse range of delectable food options. Simply scroll down to explore our enticing selection</p> -->
+
+        <ul class="menu-items">
+          <li>Main Course</li>
+          <li>Snacks</li>
+          <li>Beverges</li>
+          <li>Kerala Food</li>
+          <li>Chinese</li>
+          <li>Sandwichs</li>
+          <li>Sharwama</li>
+          <!-- <li>Haka Noodles</li>
+          <li>Noodles</li>
+          <li>Poori Sabji</li>
+          <li>Veg Frankie</li>
+          <li>Omeltte</li>
+          <li>Pav Bhaji</li>
+          <li>Cold Drinks</li>
+          <li>Tava Pulao</li> -->
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Menu Button trigger modal -->
+  <button type="button" class="btn btn btn-dark menu-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <strong>Menu</strong>
+  </button>
+
+
+    <!-- <div class="container mb-1"> -->
+      <!-- Navigation part -->
+      <!-- <header class="container main-nav"> -->
+        <!-- Inner box of nav bar -->
+        <nav class="nav-wrapper navbar mb-2">
+          <div class="container mt-1">
+            <a class="navbar-brand" href="#">
+              <img src="../assets/g12.svg" alt="Logo" width="60" height="40" class="d-inline-block align-text-top">
+              <img src="../assets/SwiftCanteen.svg" alt="">
+          </a>
+          <!-- <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form> -->
+          <ul class="nav justify-content-end nav-underline h5">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Help</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+              <div class="cart">
+                <a class="nav-link text-dark"  id="cart-button">Cart</a>
+                <img src="../assets/shopping.svg">
+                <span class="quantity">0</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- </header> -->
+      <!-- </div> -->
+      
+  <div class="main-container">
+      
+      <!-- <div class="recommended-head"> -->
+        <div class="container" style="text-align: center; padding-top: 100px;">
+          <h4>Recommended</h4>
+        </div>
+        <!-- </div> -->
+        
+        <!-- List of food items  -->
+        <div class="container list" id="menu-container">
+          
+        </div>
+  </div>
+
+  <!-- <div class="container" style=" transition: 0.5s;">
+    <div class="main-card-container">
+      <div class="main-card">
+        <div class="main-image">
+          <img src="../assets/dosa.jpg" alt="Dosa">
+        </div>
+        <div class="main-text">
+          <h5>Masala Dosa</h5>
+          <p>This is a wider card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer hdihd ihdo ihk whdow wiodh wodjwo wo hdow.</p>
+          <div class="add-container">
+            <button id="add-button" class="add-button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-card-container">
+      <div class="main-card">
+        <div class="main-image">
+          <img src="../assets/dosa.jpg" alt="Dosa">
+        </div>
+        <div class="main-text">
+          <h5>Cold Coffee</h5>
+          <p>This is a wider card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer hdihd ihdo ihk whdow wiodh wodjwo wo hdow.</p>
+          <div class="add-container">
+            <button id="add-button" class="add-button">Add to Cart</button>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="main-card-container">
+      <div class="main-card">
+        <div class="main-image">
+          <img src="../assets/dosa.jpg" alt="Dosa">
+        </div>
+        <div class="main-text">
+          <h5>Idli Sambhar</h5>
+          <p>This is a wider card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer hdihd ihdo ihk whdow wiodh wodjwo wo hdow.</p>
+          <div class="add-container">
+            <button id="add-button" class="add-button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div> -->
+
+  <div class="cart-dialog">
+    <h1 style="border-bottom: 1px solid #8bd58b;">Your Cart</h1>
+    <ul class="listCard">
+    </ul>
+    <div class="checkOut">
+        <div class="total">&#x20B9; 0 </div>
+        <button class="check-out" id="myPayment">Pay</button>
+        <div class="closeShopping">Close</div>
+    </div>
+</div>
+
+
+
+
+
+  
+  <script src="../js/mainpage.js"></script>
+</body>
+
+</html>

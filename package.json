@@ -1,0 +1,19 @@
+{
+  "name": "swiftcanteen",
+  "version": "1.0.0",
+  "description": "**A food ordering web application that allow the user(students) to order food from their canteen online, and then collect the prepared order from the canteen once done. You no more need to wait in the queue, go only when you're order is complete.**",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon mainpage.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2",
+    "stripe": "^14.8.0"
+  }
+}

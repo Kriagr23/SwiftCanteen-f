@@ -1,0 +1,18 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.home{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.home-login{
+    padding: 90px;
+    width: 50vw;
+    margin: 25px;
+}
+.home-image{
+    padding-left: 120px;
+    padding-top: 40px;
+}
